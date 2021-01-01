@@ -17,3 +17,11 @@ const greater_or_equal = (num1, num2) => {
 }
 
 console.log(sum_of_two_larger_numbers(2, 2, 2))
+
+/** Alternative solution
+ *  
+ * use formula x2 + y2 + z2 - min(x2 + y2 + z2)
+ * 
+ * todo: write min function
+ * 
+ */
