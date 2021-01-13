@@ -1,7 +1,9 @@
 const sqrt_iter = (guess, x) => {
-    return good_enough(guess, x)
-        ? guess
-        : sqrt_iter(improve(guess, x), x);
+    // return good_enough(guess, x)
+    //     ? guess
+    //     : sqrt_iter(improve(guess, x), x);
+
+    return conditional(good_enough(guess, x), guess, sqrt_iter(improve(guess, x), x))
 }
 
 const improve = (guess, x) => {
@@ -28,6 +30,10 @@ const square = (x) => {
 
 const sqrt = (x) => {
     return sqrt_iter(1, x)
+}
+
+const conditional = (predicate, then_clause, else_clause) => {
+    predicate ? then_clause : else_clause
 }
 
 console.log(sqrt(process.argv.slice(2)))
